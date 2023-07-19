@@ -12,8 +12,14 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <SearchForm onSearch={handleSearch} />
-      <CardList searchQuery={searchQuery} />
+      <div className='app'>
+        <div>
+          <SearchForm onSearch={handleSearch} />
+        </div>
+        <div>
+          <CardList searchQuery={searchQuery} />
+        </div>
+      </div>
     </div>
   );
 };

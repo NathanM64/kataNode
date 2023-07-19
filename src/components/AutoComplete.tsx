@@ -6,6 +6,7 @@ interface AutoCompleteProps {
   onChange: (selectedValues: string[]) => void;
   allowMultiple?: boolean;
   isRarity?: boolean;
+  label?: string;
 }
 
 const AutoComplete: React.FC<AutoCompleteProps> = ({
@@ -13,6 +14,7 @@ const AutoComplete: React.FC<AutoCompleteProps> = ({
   onChange,
   allowMultiple = false,
   isRarity = false,
+  label,
 }) => {
   const [inputValue, setInputValue] = useState('');
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
@@ -99,6 +101,7 @@ const AutoComplete: React.FC<AutoCompleteProps> = ({
           ))}
         </div>
       )}
+      {label && <label>{label}</label>}
       <input
         type="text"
         value={inputValue}
@@ -106,6 +109,7 @@ const AutoComplete: React.FC<AutoCompleteProps> = ({
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         ref={inputRef}
+        className='search-input'
       />
       {isFocused && (
         <ul className="autocomplete-list" ref={listRef}>

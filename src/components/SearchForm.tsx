@@ -58,14 +58,12 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           <input type="text" value={name} onChange={handleNameChange} className='search-input'/>
         </div>
         <div className='formGroup'>
-          <label>Type</label>
-          <AutoComplete key={1} options={typesOptions} onChange={handleTypeChange} allowMultiple={true}/>
+          <AutoComplete key={1} label={'Type'} options={typesOptions} onChange={handleTypeChange} allowMultiple={true}/>
         </div>
         <div className='formGroup'>
-          <label>Rareté</label>
-          <AutoComplete key={2} isRarity={true} options={rarityOptions} onChange={handleRarityChange} />
+          <AutoComplete key={2} label={'Rareté'} isRarity={true} options={rarityOptions} onChange={handleRarityChange} />
         </div>
-        <div className='formGroup'>
+        <div>
           <button type="submit" className=''>Rechercher</button>
         </div>
       </form>
