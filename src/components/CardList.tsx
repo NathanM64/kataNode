@@ -110,7 +110,7 @@ export const getRarityColor = (rarity: string): string => {
       return '#ababab';
     case 'Rare':
       return '#ffca00';
-    case 'Mythic Rare':
+    case 'Mythic':
       return '#ff8600';
     case 'Special':
       return '#fd6ee1';

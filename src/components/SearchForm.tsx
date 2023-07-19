@@ -70,6 +70,6 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   );
 };
 
-const rarityOptions = ['Common', 'Uncommon', 'Rare', 'Mythic Rare', 'Special', 'Basic Land'];
+const rarityOptions = ['Common', 'Uncommon', 'Rare', 'Mythic', 'Special', 'Basic Land'];
 
 export default SearchForm;
