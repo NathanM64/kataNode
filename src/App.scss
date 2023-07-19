@@ -1,0 +1,129 @@
+.search-container {
+  padding: 24px;
+  width: 100vw;
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+
+    .formGroup {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .search-button {
+      margin-left: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .autocomplete {
+      position: relative;
+    
+      input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+    
+        &:focus {
+          outline: none;
+        }
+      }
+    
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 8px;
+    
+        .tag {
+          background-color: #f2f2f2;
+          border-radius: 4px;
+          padding: 4px 8px;
+          margin-right: 8px;
+          margin-bottom: 8px;
+          display: flex;
+          align-items: center;
+    
+          button {
+            background-color: transparent;
+            border: none;
+            color: #777;
+            font-weight: bold;
+            font-size: 12px;
+            margin-left: 4px;
+            cursor: pointer;
+          }
+        }
+      }
+    
+      .autocomplete-list {
+        position: absolute;
+        z-index: 999;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        max-height: 200px;
+        overflow-y: auto;
+    
+        li {
+          padding: 8px;
+          cursor: pointer;
+    
+          &:hover {
+            background-color: #f2f2f2;
+          }
+        }
+      }
+    
+      input:focus + .autocomplete-list {
+        display: block;
+      }
+    }
+  }
+}
+
+.cardList-container {
+  padding: 24px;
+  width: 100vw;
+
+  .cardList-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+
+    .cardList-card {
+      margin: 0 10px 20px;
+      width: 300px;
+      border: 1px solid #ccc;
+    }
+  }
+}
