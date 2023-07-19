@@ -6,4 +6,4 @@
    ```
 
 ## Conclusion
-Je suis allé jusqu'au premier bonus mais je n'ai pas anticipé dès le début les deux derniers bonus. Autrement, j'aurai utilisé react-query qui est super pour la mise en cache des datas.
+Je suis allé jusqu'au premier bonus mais je n'ai pas anticipé dès le début les deux derniers bonus. Autrement, j'aurai utilisé react-query qui est super pour la mise en cache des datas et react-router-dom pour gérer la navigation avec les paramètres dans l'url.
