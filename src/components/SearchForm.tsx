@@ -2,17 +2,11 @@ import React, { useState, useEffect } from 'react';
 import AutoComplete from './AutoComplete';
 import { SearchQuery } from '../App';
 
-export interface SearchQuery {
-  name: string;
-  types: string[];
-  rarity: string;
-}
-
 interface SearchFormProps {
   onSearch: (searchQuery: SearchQuery) => void;
 }
 
-const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
+export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   const [name, setName] = useState('');
   const [types, setTypes] = useState<string[]>([]);
   const [typesOptions, setTypesOptions] = useState<string[]>([]);
@@ -50,6 +44,11 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
     onSearch(searchQuery);
   };
 
+  const handlePageChange = (event: React.ChangeEvent<unknown>, page: number) => {
+    console.log(currentPage)
+    setCurrentPage(page);
+  };
+  
   return (
     <div className="search-container">
       <form onSubmit={handleSubmit} className='search-form'>

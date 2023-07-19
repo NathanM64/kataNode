@@ -24,7 +24,7 @@ const App: React.FC = () => {
   );
 };
 
-interface SearchQuery {
+export interface SearchQuery {
   name: string;
   types: string[];
   rarity: string;

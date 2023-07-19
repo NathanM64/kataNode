@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Pagination from '@mui/material/Pagination';
-import { SearchQuery } from './SearchForm';
+import { SearchQuery } from '../App.tsx';
 
 const API_URL = 'https://api.magicthegathering.io/v1/cards';
 
@@ -13,12 +13,6 @@ interface Card {
   id: string;
   name: string;
   text: string;
-  types: string[];
-  rarity: string;
-}
-
-interface SearchQuery {
-  name: string;
   types: string[];
   rarity: string;
 }
